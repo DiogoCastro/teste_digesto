@@ -1,44 +1,27 @@
-import csv
-import json
+import logging
+import sys
 
-from pprint import pprint
+from outputs.output_json import save_json
+from outputs.output_csv import save_csv
+from outputs.output_print import print_data
 
-
-def print_data(crawler_data: dict):
-    """
-    Retorna os dados formatados sem armazenar em disco.
-
-    Args:
-    crawler_data: dict -> Dicionário com todos os dados que devem ser printados.
-    """
-    pprint(crawler_data, indent=4)
+logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
 
 
-def save_json(crawler_data: dict):
-    """
-    Salva os dados coletados num arquivo .json
-
-    Args:
-    crawler_data: dict -> Dicionário com todos os dados que devem ser gravados
-    em um arquivo .json
-    """
-    with open('outputs/files/items.json', 'w') as json_file:
-        json.dump(crawler_data, json_file, indent=4)
-
-
-def save_csv(crawler_data: dict):
-    """
-    Salva os dados coletados num arquivo .csv
-
-    Args:
-    crawler_data: dict -> Dicionário com todos os dados que devem ser gravados
-    em um arquivo .csv
-    """
-    headers = ['NAME', 'PRICE', 'STORAGE', 'CPU', 'MEMORY', 'BANDWIDTH']
-    with open('outputs/files/items.csv', 'w') as file:
-        writer = csv.writer(file)
-        writer.writerow(headers)
-        for key, value in crawler_data.items():
-            writer.writerow([key.upper()])
-            for row in value:
-                writer.writerow(row.values())
+def set_options(crawler_runner: dict):
+    options = [
+        '--print',
+        '--save_csv',
+        '--save_json',
+    ]
+    try:
+        if sys.argv[1] == options[0]:
+            print_data(crawler_runner)
+        elif sys.argv[1] == options[1]:
+            save_csv(crawler_runner)
+        elif sys.argv[1] == options[2]:
+            save_json(crawler_runner)
+    except IndexError:
+        logging.error(
+                f'Por favor, insira uma das opções válidas: {options}'
+        )

@@ -1,4 +1,4 @@
-from utils.functions import remove_tag, price_formatter, get_cards_content
+from utils.functions import get_cards_content
 
 
 class Crawler:
