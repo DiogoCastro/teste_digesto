@@ -9,6 +9,15 @@ logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
 
 
 def set_options(crawler_runner: dict):
+    """
+    Cria opções que permitem ser executadas a partir da chamada de um arquivo
+    no console.
+
+    Args:
+    crawler_runner: dict -> Dicionário com todas as informações que devem ser
+    passadas para a função que se encarregará de mostrar os dados na tela ou
+    salvar os dados no disco, a partir do formato escolhido.
+    """
     options = [
         '--print',
         '--save_csv',
