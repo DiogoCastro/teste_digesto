@@ -1,7 +1,5 @@
 import requests
 
-from pprint import pprint
-
 from bs4 import BeautifulSoup
 
 from utils.functions import remove_tag, price_formatter
@@ -43,7 +41,7 @@ class Crawler:
                 elif 'bandwidth' in normalized_item:
                     crawler_obj['bandwidth'] = remove_tag(normalized_item)
             crawler_data.append(crawler_obj)
-        pprint(crawler_data, indent=4)
+        return crawler_data
 
     def hostgator_crawler(self):
         """
