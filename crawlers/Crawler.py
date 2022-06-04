@@ -1,52 +1,36 @@
-import requests
-
-from bs4 import BeautifulSoup
-
-from utils.functions import remove_tag, price_formatter
+from utils.functions import remove_tag, price_formatter, get_cards_content
 
 
 class Crawler:
     """
-    Classe principal usada para gerenciar os crawlers desenvolvidos.
+    Classe principal usada para gerenciar e encapsular o crawler desenvolvido.
     """
 
-    def vultr_crawler(self):
+    def __init__(self):
         """
-        Crawler para listagem detalhada de informações das VMs oferecidas pelo
-        Vultr.
+        Método inicializador do crawler.
         """
+        self.data = {
+            'vultr': [],
+            'hostgator': []
+        }
+        self.urls = [
+                'https://www.vultr.com/products/bare-metal/#pricing',
+                'https://www.hostgator.com/vps-hosting'
+        ]
 
-        content = requests.get(
-            'https://www.vultr.com/products/bare-metal/#pricing').content
-        html = BeautifulSoup(content, 'html.parser')
-        cards = html.find_all('a', class_='package')
-        crawler_data = list()
-        for card in cards:
-            crawler_obj = dict()
-            name = card.find(class_='package__title h6').text
-            raw_price = card.find(class_='price__value').text
-            crawler_obj['name'] = remove_tag(name)
-            crawler_obj['price'] = price_formatter(raw_price)
-            body = card.find_all(class_='package__list-item')
-            storage = list()
-            for item in body:
-                normalized_item = item.text.lower()
-                if 'cores' in normalized_item:
-                    crawler_obj['cpu'] = remove_tag(normalized_item)
-                elif 'memory' in normalized_item:
-                    crawler_obj['memory'] = remove_tag(normalized_item)
-                elif 'ssd' in normalized_item or 'nvme' in normalized_item:
-                    storage.append(remove_tag(normalized_item))
-                    crawler_obj['storage'] = storage
-                elif 'bandwidth' in normalized_item:
-                    crawler_obj['bandwidth'] = remove_tag(normalized_item)
-            crawler_data.append(crawler_obj)
-        return crawler_data
-
-    def hostgator_crawler(self):
+    def crawler(self) -> dict:
         """
-        Crawler para listagem detalhada de informações das VMs oferecidas pelo
-        Hostgator.
-        """
+        Método responsável por realizar as operações finais da coleta do
+        crawler, baseado em sua URL.
 
-        ...
+        Returns:
+        Dicionário contendo todos os dados corretamente formatados e prontos
+        para serem mostrados ao usuário ou armazenados.
+        """
+        for url in self.urls:
+            if 'vultr' in url:
+                self.data['vultr'] = get_cards_content(url)
+            else:
+                self.data['hostgator'] = get_cards_content(url)
+        return self.data

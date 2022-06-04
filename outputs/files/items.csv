@@ -1,4 +1,5 @@
 NAME,PRICE,STORAGE,CPU,MEMORY,BANDWIDTH
+VULTR,,,,,
 intel e3-1270v6,120.0,['2 x 240 gb ssd'],4 cores / 8 threads @ 3.8ghz,32 gb memory,5 tb bandwidth
 intel e-2286g,185.0,['2 x 960 gb ssd'],6 cores / 12 threads @ 4ghz,32 gb memory,10 tb bandwidth
 intel e-2288g,350.0,['2 x 1.92 tb nvme'],8 cores / 16 threads @ 3.7ghz,128 gb memory,10 tb bandwidth
@@ -11,3 +12,7 @@ amd epyc 7713,5500.0,"['2 x 480 gb ssd', '12 x 6.4 tb nvme']",128 cores / 256 th
 8 x nvidia a100 80gb,14000.0,"['2 x 480 gb ssd', '4 x 3.84 tb nvme']",48 cores / 96 threads @ 2.8ghz,1024 gb memory,25 tb bandwidth
 amd epyc 7543p,,"['2 x 480 gb ssd', '3 x 6.4 tb nvme']",32 cores / 64 threads @ 2.8ghz,512 gb memory,15 tb bandwidth
 amd epyc 7543,,"['2 x 480 gb ssd', '6 x 6.4 tb nvme']",64 cores / 128 threads @ 2.8ghz,1024 gb memory,20 tb bandwidth
+HOSTGATOR,,,,,
+snappy 2000,23.95,['120 gb ssd'],2 core cpu,2gb ram,unmetered bandwidth
+snappy 4000,34.95,['165 gb ssd'],2 core cpu,4 gb ram,unmetered bandwidth
+snappy 8000,59.95,['240 gb ssd'],4 core cpu,8 gb ram,unmetered bandwidth
