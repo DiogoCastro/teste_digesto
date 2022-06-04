@@ -1,0 +1,13 @@
+NAME,PRICE,STORAGE,CPU,MEMORY,BANDWIDTH
+intel e3-1270v6,120.0,['2 x 240 gb ssd'],4 cores / 8 threads @ 3.8ghz,32 gb memory,5 tb bandwidth
+intel e-2286g,185.0,['2 x 960 gb ssd'],6 cores / 12 threads @ 4ghz,32 gb memory,10 tb bandwidth
+intel e-2288g,350.0,['2 x 1.92 tb nvme'],8 cores / 16 threads @ 3.7ghz,128 gb memory,10 tb bandwidth
+intel e-2388g,425.0,['2 x 1.92 tb nvme'],8 cores / 16 threads @ 3.2ghz,128 gb memory,10 tb bandwidth
+amd epyc 7443p,725.0,"['2 x 480 gb ssd', '2 x 1.92 tb nvme']",24 cores / 48 threads @ 2.85ghz,256 gb memory,10 tb bandwidth
+amd epyc 7543p,1650.0,"['2 x 480 gb ssd', '2 x 3.2 tb nvme']",24 cores / 48 threads @ 3.2ghz,512 gb memory,15 tb bandwidth
+amd epyc 73f3p,1795.0,"['2 x 480 gb ssd', '2 x 3.84 tb nvme']",16 cores / 32 threads @ 3.5ghz,512 gb memory,10 tb bandwidth
+amd epyc 7713,5500.0,"['2 x 480 gb ssd', '12 x 6.4 tb nvme']",128 cores / 256 threads @ 2ghz,2048 gb memory,25 tb bandwidth
+4 x nvidia a100 80gb,7000.0,"['2 x 480 gb ssd', '4 x 1.6 tb nvme']",48 cores / 96 threads @ 2.8ghz,512 gb memory,15 tb bandwidth
+8 x nvidia a100 80gb,14000.0,"['2 x 480 gb ssd', '4 x 3.84 tb nvme']",48 cores / 96 threads @ 2.8ghz,1024 gb memory,25 tb bandwidth
+amd epyc 7543p,,"['2 x 480 gb ssd', '3 x 6.4 tb nvme']",32 cores / 64 threads @ 2.8ghz,512 gb memory,15 tb bandwidth
+amd epyc 7543,,"['2 x 480 gb ssd', '6 x 6.4 tb nvme']",64 cores / 128 threads @ 2.8ghz,1024 gb memory,20 tb bandwidth

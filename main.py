@@ -1,7 +1,7 @@
 import sys
 
 from crawlers.Crawler import Crawler
-from outputs.output_manager import print_data
+from outputs.output_manager import print_data, save_csv
 
 
 if __name__ == '__main__':
@@ -10,6 +10,8 @@ if __name__ == '__main__':
         vultr = crawler.vultr_crawler()
         if sys.argv[1] == '--print':
             print_data(vultr)
+        elif sys.argv[1] == '--save_csv':
+            save_csv(vultr)
     else:
         print(
             (
