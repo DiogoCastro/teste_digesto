@@ -1,0 +1,130 @@
+[
+    {
+        "name": "intel e3-1270v6",
+        "price": 120,
+        "storage": [
+            "2 x 240 gb ssd"
+        ],
+        "cpu": "4 cores / 8 threads @ 3.8ghz",
+        "memory": "32 gb memory",
+        "bandwidth": "5 tb bandwidth"
+    },
+    {
+        "name": "intel e-2286g",
+        "price": 185,
+        "storage": [
+            "2 x 960 gb ssd"
+        ],
+        "cpu": "6 cores / 12 threads @ 4ghz",
+        "memory": "32 gb memory",
+        "bandwidth": "10 tb bandwidth"
+    },
+    {
+        "name": "intel e-2288g",
+        "price": 350,
+        "storage": [
+            "2 x 1.92 tb nvme"
+        ],
+        "cpu": "8 cores / 16 threads @ 3.7ghz",
+        "memory": "128 gb memory",
+        "bandwidth": "10 tb bandwidth"
+    },
+    {
+        "name": "intel e-2388g",
+        "price": 425,
+        "storage": [
+            "2 x 1.92 tb nvme"
+        ],
+        "cpu": "8 cores / 16 threads @ 3.2ghz",
+        "memory": "128 gb memory",
+        "bandwidth": "10 tb bandwidth"
+    },
+    {
+        "name": "amd epyc 7443p",
+        "price": 725,
+        "storage": [
+            "2 x 480 gb ssd",
+            "2 x 1.92 tb nvme"
+        ],
+        "cpu": "24 cores / 48 threads @ 2.85ghz",
+        "memory": "256 gb memory",
+        "bandwidth": "10 tb bandwidth"
+    },
+    {
+        "name": "amd epyc 7543p",
+        "price": 1650,
+        "storage": [
+            "2 x 480 gb ssd",
+            "2 x 3.2 tb nvme"
+        ],
+        "cpu": "24 cores / 48 threads @ 3.2ghz",
+        "memory": "512 gb memory",
+        "bandwidth": "15 tb bandwidth"
+    },
+    {
+        "name": "amd epyc 73f3p",
+        "price": 1795,
+        "storage": [
+            "2 x 480 gb ssd",
+            "2 x 3.84 tb nvme"
+        ],
+        "cpu": "16 cores / 32 threads @ 3.5ghz",
+        "memory": "512 gb memory",
+        "bandwidth": "10 tb bandwidth"
+    },
+    {
+        "name": "amd epyc 7713",
+        "price": 5500,
+        "storage": [
+            "2 x 480 gb ssd",
+            "12 x 6.4 tb nvme"
+        ],
+        "cpu": "128 cores / 256 threads @ 2ghz",
+        "memory": "2048 gb memory",
+        "bandwidth": "25 tb bandwidth"
+    },
+    {
+        "name": "4 x nvidia a100 80gb",
+        "price": 7000,
+        "storage": [
+            "2 x 480 gb ssd",
+            "4 x 1.6 tb nvme"
+        ],
+        "cpu": "48 cores / 96 threads @ 2.8ghz",
+        "memory": "512 gb memory",
+        "bandwidth": "15 tb bandwidth"
+    },
+    {
+        "name": "8 x nvidia a100 80gb",
+        "price": 14000,
+        "storage": [
+            "2 x 480 gb ssd",
+            "4 x 3.84 tb nvme"
+        ],
+        "cpu": "48 cores / 96 threads @ 2.8ghz",
+        "memory": "1024 gb memory",
+        "bandwidth": "25 tb bandwidth"
+    },
+    {
+        "name": "amd epyc 7543p",
+        "price": null,
+        "storage": [
+            "2 x 480 gb ssd",
+            "3 x 6.4 tb nvme"
+        ],
+        "cpu": "32 cores / 64 threads @ 2.8ghz",
+        "memory": "512 gb memory",
+        "bandwidth": "15 tb bandwidth"
+    },
+    {
+        "name": "amd epyc 7543",
+        "price": null,
+        "storage": [
+            "2 x 480 gb ssd",
+            "6 x 6.4 tb nvme"
+        ],
+        "cpu": "64 cores / 128 threads @ 2.8ghz",
+        "memory": "1024 gb memory",
+        "bandwidth": "20 tb bandwidth"
+    }
+]

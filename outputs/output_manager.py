@@ -1,4 +1,5 @@
 import csv
+import json
 
 from pprint import pprint
 
@@ -11,6 +12,17 @@ def print_data(crawler_data: list):
     crawler_data: list -> Lista com todos os dados que devem ser printados.
     """
     pprint(crawler_data, indent=4)
+
+
+def save_json(crawler_data: list):
+    """
+    Salva os dados coletados num arquivo .json
+
+    Args:
+    crawler_data: list -> Lista com todos os dados que devem ser gravados.
+    """
+    with open('outputs/files/items.json', 'w') as json_file:
+        json.dump(crawler_data, json_file)
 
 
 def save_csv(crawler_data: list):
