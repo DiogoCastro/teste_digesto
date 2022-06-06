@@ -16,7 +16,7 @@ def get_cards_content(url: str) -> list:
     Returns:
     Uma lista contendo todos os dados já formatados prontos para serem usados.
     """
-    content = requests.get(url).content
+    content = requests.get(url, verify=False).content
     html = BeautifulSoup(content, 'html.parser')
     crawler_data = []
     if 'vultr' in url:
